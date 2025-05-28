@@ -4,6 +4,7 @@ body {
   background: #f9f9f9;
   color: #004d40;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -159,7 +160,9 @@ footer {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 1rem auto;
+  width: 100%;
   max-width: 1000px;
+  box-sizing: border-box;
 }
 
 .info-img {
