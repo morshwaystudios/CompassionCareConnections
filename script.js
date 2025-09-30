@@ -62,11 +62,12 @@ const scrollToTarget = (hash) => {
   });
 })();
 
-// Lead form validation + event stub
+// Lead form validation + Google Sheet push
 (() => {
   const form = document.getElementById('leadForm');
   const phoneRe = /^(\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
-  form?.addEventListener('submit', (e) => {
+
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form));
 
@@ -87,16 +88,24 @@ const scrollToTarget = (hash) => {
       return;
     }
 
-    // Analytics stub (swap with GA/Meta/Pixel)
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'lead_submit',
-      lead: { name: data.name, phone: data.phone, email: data.email || '', service: data.service }
-    });
+    try {
+      // 🚀 Push to Google Apps Script Web App (your endpoint)
+      const res = await fetch("https://script.google.com/macros/s/AKfycbylsVrcNPErr8t9isw2XeFyRcgPK2vl1cMdG6deFtckdlgE_KPyH6JmQbUAYBASBu8mFw/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-    // UX feedback
-    form.reset();
-    alert('Thanks! We received your request and will reach out shortly.');
+      if (res.ok) {
+        alert("✅ Thanks! Your info was saved to our system.");
+        form.reset();
+      } else {
+        alert("❌ Something went wrong saving your info.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("⚠️ Network error — try again later.");
+    }
   });
 })();
 
