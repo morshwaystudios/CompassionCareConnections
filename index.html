@@ -168,52 +168,28 @@
     </div>
   </section>
 
- <!-- Booking Form -->
-<form action="https://formsubmit.co/rididumo@mailgolem.com" method="POST" class="form card">
-  <!-- Anti-spam honeypot -->
-  <input type="text" name="_honey" style="display:none">
+<form action="https://formspree.io/f/xeorzdr1" method="POST">
+  <label for="name">Full Name</label><br>
+  <input id="name" name="name" type="text" required><br><br>
 
-  <!-- Disable Captcha -->
-  <input type="hidden" name="_captcha" value="false">
+  <label for="phone">Phone</label><br>
+  <input id="phone" name="phone" type="tel" required><br><br>
 
-  <!-- Clean email subject -->
-  <input type="hidden" name="_subject" value="New Test Booking Submission">
+  <label for="email">Email</label><br>
+  <input id="email" name="email" type="email" required><br><br>
 
-  <!-- Keep template formatted -->
-  <input type="hidden" name="_template" value="table">
+  <label for="service">Service Interested In</label><br>
+  <select id="service" name="service" required>
+    <option value="" disabled selected>Select one</option>
+    <option>In-Home Care</option>
+    <option>CPR Training</option>
+    <option>Notary</option>
+  </select><br><br>
 
-  <!-- Comment out redirect for testing -->
-  <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+  <label for="message">Anything we should know?</label><br>
+  <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea><br><br>
 
-  <div class="form__row">
-    <label for="name">Full Name</label>
-    <input id="name" name="name" type="text" autocomplete="name" required>
-  </div>
-  <div class="form__row">
-    <label for="phone">Phone</label>
-    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
-  </div>
-  <div class="form__row">
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" autocomplete="email">
-  </div>
-  <div class="form__row">
-    <label for="service">Service Interested In</label>
-    <select id="service" name="service" required>
-      <option value="" disabled selected>Select one</option>
-      <option>In-Home Care</option>
-      <option>CPR Training</option>
-      <option>Notary</option>
-    </select>
-  </div>
-  <div class="form__row">
-    <label for="message">Anything we should know?</label>
-    <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
-  </div>
-  <div class="form__actions">
-    <button class="btn btn--primary btn--lg" type="submit">Submit</button>
-    <p class="small">Or call <a href="tel:8133606958">(813) 360-6958</a></p>
-  </div>
+  <button type="submit">Send Message</button>
 </form>
 
 
@@ -297,6 +273,7 @@
   <script defer src="script.js"></script>
 </body>
 </html>
+
 
 
 
