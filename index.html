@@ -173,7 +173,7 @@
     </div>
   </section>
 
- <!-- Contact -->
+<!-- Contact -->
 <section id="contact" class="section reveal">
   <div class="container">
     <h2 class="h2 center">Contact Us</h2>
@@ -189,24 +189,31 @@
 
       <!-- Contact Form Card -->
       <div class="card">
-        <form id="contactForm" action="https://formsubmit.co/kevin.acevedogmfsteel@gmail.com" method="POST" class="form">
+        <form id="contactForm" action="https://formsubmit.co/92c532554343ba1264498ca20d4db5a3" method="POST" class="form">
+          <!-- Hidden settings -->
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_subject" value="New Contact Form Submission">
+          <input type="hidden" name="_subject" value="New Contact Form Submission from Compassionate Care Connections">
+          <input type="hidden" name="_formname" value="CompassionateCareConnectionsContact">
 
           <div class="form__row">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <label for="contact_name">Full Name</label>
+            <input type="text" id="contact_name" name="Client Name" placeholder="Your full name" required>
           </div>
 
           <div class="form__row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <label for="contact_email">Email</label>
+            <input type="email" id="contact_email" name="Client Email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form__row">
+            <label for="contact_phone">Phone Number</label>
+            <input type="tel" id="contact_phone" name="Client Phone" placeholder="(555) 123-4567" required>
           </div>
 
           <div class="form__row">
             <label for="service">Service Requested</label>
-            <select id="service" name="service" required>
+            <select id="service" name="Service Requested" required>
               <option value="">-- Please choose an option --</option>
               <option value="CPR Training">CPR Training</option>
               <option value="First Aid Certification">First Aid Certification</option>
@@ -218,8 +225,8 @@
           </div>
 
           <div class="form__row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
+            <label for="contact_message">Message</label>
+            <textarea id="contact_message" name="Message Details" rows="5" placeholder="Tell us more..." required></textarea>
           </div>
 
           <div class="form__actions">
@@ -264,4 +271,5 @@
   <script defer src="script.js"></script>
 </body>
 </html>
+
 
