@@ -169,51 +169,50 @@
   </section>
 
  <!-- Booking Form -->
-<section id="booking" class="section reveal">
-  <div class="container">
-    <h2 class="h2">Book Your Free Consult</h2>
-    <p class="lead center">Tell us a few details and we’ll reach out within 24 hours.</p>
-    <form action="https://formsubmit.co/9c1fc0e1fe7d16a767a767dfe4ee4ee4080" method="POST" class="form card">
+<form action="https://formsubmit.co/kevin.acevedogmfsteel@gmail.com" method="POST" class="form card">
+  <!-- Anti-spam honeypot -->
+  <input type="text" name="_honey" style="display:none">
 
-      <!-- Redirect to thank-you page (create thank-you.html if you want a nice finish page) -->
-      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-      <!-- Disable Captcha -->
-      <input type="hidden" name="_captcha" value="false">
-      <!-- Email subject -->
-      <input type="hidden" name="_subject" value="New Booking Request from CompassionateCareConnections.com">
+  <!-- Disable Captcha (optional) -->
+  <input type="hidden" name="_captcha" value="false">
 
-      <div class="form__row">
-        <label for="name">Full Name</label>
-        <input id="name" name="name" type="text" autocomplete="name" required>
-      </div>
-      <div class="form__row">
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
-      </div>
-      <div class="form__row">
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" autocomplete="email">
-      </div>
-      <div class="form__row">
-        <label for="service">Service Interested In</label>
-        <select id="service" name="service" required>
-          <option value="" disabled selected>Select one</option>
-          <option>In-Home Care</option>
-          <option>CPR Training</option>
-          <option>Notary</option>
-        </select>
-      </div>
-      <div class="form__row">
-        <label for="message">Anything we should know?</label>
-        <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
-      </div>
-      <div class="form__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Submit</button>
-        <p class="small">Or call <a href="tel:8133606958">(813) 360-6958</a></p>
-      </div>
-    </form>
+  <!-- Optional: add later when you have a real page; leave commented now to avoid any redirect weirdness -->
+  <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+
+  <!-- Email subject line -->
+  <input type="hidden" name="_subject" value="New Booking Request from CompassionateCareConnections.com">
+
+  <div class="form__row">
+    <label for="name">Full Name</label>
+    <input id="name" name="name" type="text" autocomplete="name" required>
   </div>
-</section>
+  <div class="form__row">
+    <label for="phone">Phone</label>
+    <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+  </div>
+  <div class="form__row">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="email">
+  </div>
+  <div class="form__row">
+    <label for="service">Service Interested In</label>
+    <select id="service" name="service" required>
+      <option value="" disabled selected>Select one</option>
+      <option>In-Home Care</option>
+      <option>CPR Training</option>
+      <option>Notary</option>
+    </select>
+  </div>
+  <div class="form__row">
+    <label for="message">Anything we should know?</label>
+    <textarea id="message" name="message" rows="4" placeholder="Optional"></textarea>
+  </div>
+  <div class="form__actions">
+    <button class="btn btn--primary btn--lg" type="submit">Submit</button>
+    <p class="small">Or call <a href="tel:8133606958">(813) 360-6958</a></p>
+  </div>
+</form>
+
 
 <script>
   // Close modal
@@ -294,6 +293,7 @@
   <script defer src="script.js"></script>
 </body>
 </html>
+
 
 
 
